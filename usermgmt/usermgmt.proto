@@ -6,7 +6,7 @@ option  go_package = "rr.com/go-usermgmt-grpc;go_usermgmt_grpc";
 
 service UserManagement {
     rpc CreateNewUser (NewUser) returns (User) {}
-    rpc GetUsers (GetUsersParams) returns (UserList) {}
+    rpc GetUsers (GetUsersParams) returns (UsersList) {}
 }
 
 message NewUser {
@@ -24,7 +24,7 @@ message GetUsersParams {
  
 }
 
-message UserList {
+message UsersList {
     repeated User users = 1;  
 }
 
